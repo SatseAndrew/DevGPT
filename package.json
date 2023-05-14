@@ -2,7 +2,9 @@
   "name": "gitgpt",
   "version": "0.0.1",
   "description": "DevGPT is a versatile console application that integrates GPT with your development workflow, assisting with Git operations, code review, debugging, and more to boost your productivity.",
-  "scripts": {},
+  "scripts": {
+    "build": "tsc"
+  },
   "keywords": [
     "chat-gpt",
     "git",
@@ -16,6 +18,8 @@
   ],
   "author": "Andrew Nielsen Sadduq",
   "license": "ISC",
-  "devDependencies": {},
-  "dependencies": {}
+  "devDependencies": {
+    "@types/node": "^20.1.4",
+    "typescript": "^5.0.4"
+  }
 }
