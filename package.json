@@ -3,7 +3,8 @@
   "version": "0.0.1",
   "description": "DevGPT is a versatile console application that integrates GPT with your development workflow, assisting with Git operations, code review, debugging, and more to boost your productivity.",
   "scripts": {
-    "build": "tsc"
+    "build": "tsc",
+    "dev": "ts-node-dev --respawn --transpile-only src/index.ts"
   },
   "keywords": [
     "chat-gpt",
@@ -20,6 +21,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.1.4",
+    "ts-node": "^10.9.1",
+    "ts-node-dev": "^2.0.0",
     "typescript": "^5.0.4"
   }
 }
