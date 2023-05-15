@@ -26,6 +26,7 @@
     "typescript": "^5.0.4"
   },
   "dependencies": {
-    "axios": "^1.4.0"
+    "axios": "^1.4.0",
+    "simple-git": "^3.18.0"
   }
 }
