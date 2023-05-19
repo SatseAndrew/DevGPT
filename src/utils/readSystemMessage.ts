@@ -2,7 +2,8 @@ import { promises as fs } from 'fs';
 import path from 'path';
 
 export enum SystemMessage {
-    GitAssistant = "gitAssistant"
+    GitAssistant = "gitAssistant",
+    CodeReviewer = "codeReviewer"
 }
 
 export async function readSystemMessage(systemMessage: SystemMessage) {
