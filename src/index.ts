@@ -1,7 +1,10 @@
+#!/usr/bin/env node
+
 import dotenv from 'dotenv';
 dotenv.config();
 import { Command } from 'commander';
 import { generateCommitMessage } from './commands/generateCommitMessage';
+import { reviewCodeFile } from './commands/reviewCodeFile';
 
 const program = new Command();
 
@@ -11,11 +14,15 @@ program
     .version('0.0.1');
 
 program
-    .command('generate <type>')
-    .action(async (type: string) => {
-        if (type === 'git-message') {
-            await generateCommitMessage();
-        }
+    .command('generate git-message')
+    .action(generateCommitMessage);
+
+program
+    .command('review <filepath>')
+    .description('Reviews the code and provides feedback from the specified file')
+    .action(async (filepath) => {
+        await reviewCodeFile(filepath);
     });
+
 
 program.parse(process.argv);
