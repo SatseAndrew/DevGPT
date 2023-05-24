@@ -9,10 +9,6 @@ const rl = readline.createInterface({
 
 export async function startChatLoop(initialMessages?: ChatMessage[]) {
   let messages = initialMessages ?? [];
-
-  console.log('initial messages');
-  console.log(messages);
-
   messages = await sendMessages(messages);
 
   while (true) {
