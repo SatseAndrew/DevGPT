@@ -36,7 +36,7 @@ async function sendMessages(messages: ChatMessage[]): Promise<ChatMessage[]> {
   let bufferedResponse = '';
   const chatGenerator = completeChat(messages);
   
-  console.log('AI: ');
+  process.stdout.write('AI: ');
   for await (const token of chatGenerator) {
     bufferedResponse += token;
     process.stdout.write(token);
