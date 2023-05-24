@@ -1,7 +1,7 @@
 import fs from 'fs/promises';
 import path from 'path';
 
-async function findPullRequestTemplate(): Promise<string> {
+export async function findPullRequestTemplate(): Promise<string> {
     let currentDir = process.cwd();
   
     while (currentDir !== '/') {
