@@ -20,9 +20,7 @@ program
 program
     .command('review <filepath>')
     .description('Reviews the code and provides feedback from the specified file')
-    .action(async (filepath) => {
-        await reviewCodeFile(filepath);
-    });
+    .action(reviewCodeFile);
 
 
 program.parse(process.argv);
