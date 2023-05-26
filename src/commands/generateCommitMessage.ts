@@ -14,7 +14,7 @@ export async function generateCommitMessage() {
 
     let systemMessage: string;
     try {
-        systemMessage = await readSystemMessage(SystemMessage.GitAssistant);
+        systemMessage = await readSystemMessage(SystemMessage.SoftwareDeveloper);
     } catch (error) {
         console.error('Failed to read system message.', error);
         return;

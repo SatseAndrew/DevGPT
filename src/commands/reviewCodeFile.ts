@@ -27,7 +27,7 @@ export async function reviewCodeFile(filepath: string) {
     let systemMessage: string;
 
     try {
-        systemMessage = await readSystemMessage(SystemMessage.CodeReviewer);
+        systemMessage = await readSystemMessage(SystemMessage.SoftwareDeveloper);
     } catch(error) {
         console.error('Failed to read system message.', error);
         return;
