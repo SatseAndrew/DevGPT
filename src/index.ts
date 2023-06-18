@@ -5,6 +5,8 @@ dotenv.config();
 import { Command } from 'commander';
 import { generateCommitMessage } from './commands/generateCommitMessage';
 import { reviewCodeFile } from './commands/reviewCodeFile';
+import { generatePullRequestDescription } from './commands/generatePullRequestDescription';
+import { fetchJiraIssue } from './jira';
 
 const program = new Command();
 
@@ -14,13 +16,16 @@ program
     .version('0.0.1');
 
 program
-    .command('generate git-message')
+    .command('write git message')
     .action(generateCommitMessage);
+
+program
+    .command('write pr description')
+    .action(generatePullRequestDescription);
 
 program
     .command('review <filepath>')
     .description('Reviews the code and provides feedback from the specified file')
     .action(reviewCodeFile);
-
 
 program.parse(process.argv);
